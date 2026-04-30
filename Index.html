@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MQLE</title>
+
+<style>
+
+:root {
+    --dark: #0f172a;
+    --blue: #1e3a8a;
+    --accent: #38bdf8;
+    --light: #7dd3fc;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, var(--dark), var(--blue));
+    color: white;
+}
+
+.navbar {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--accent);
+
+    animation: slideLeft 0.8s ease forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.main {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    transition: 0.4s;
+
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+}
+
+.profile-img {
+    width: 130px;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    margin-bottom: 20px;
+
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+.title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: var(--light);
+
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.logo {
+    width: 17px;
+
+    animation: slideRight 0.8s ease forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+}
+
+.icons img {
+    width: 45px;
+    transition: 0.3s;
+    filter: brightness(0.9);
+}
+
+.icons img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2) drop-shadow(0 0 10px var(--accent));
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <img class="logo" src="Index/MM.png" alt="logo">
+    <div class="logo-text">QLE</div>
+</div>
+
+<div class="main">
+
+    <div class="card">
+        <img src="Index/mqle.jpg" class="profile-img">
+        <div class="title">MQLE</div>
+        <div class="icons">
+
+            <a href="https://www.instagram.com/mqleyt4" target="_blank">
+                <img src="Index/instagram.png">
+            </a>
+
+            <a href="https://www.threads.com/@mqleyt4" target="_blank">
+                <img src="Index/threads.png">
+            </a>
+
+            <a href="https://www.youtube.com/@X-MQLEyt4" target="_blank">
+                <img src="Index/youtube.png">
+            </a>
+
+            <a href="https://discord.gg/8FapWn8Uue" target="_blank">
+                <img src="Index/discord.png">
+            </a>
+
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<div class="footer">
+    © 2026 MQLE
+</div>
+</body>
+</html>
